@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.4.16)  16 DEC 2019 07:17
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.4.16)  16 DEC 2019 08:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1804,43 +1804,43 @@ File: Walker-elementary-statistical-modeling-draft_files/figure-latex/plot-boot
 <use Walker-elementary-statistical-modeling-draft_files/figure-latex/plot-boot-
 plot-1.pdf>
 [188] [189]
-Overfull \hbox (22.5pt too wide) in paragraph at lines 8693--8693
+Overfull \hbox (22.5pt too wide) in paragraph at lines 8701--8701
 []\TU/lmtt/m/n/10 ##  contrast       ratio    SE  df asymp.LCL asymp.UCL z.rati
 o p.value[] 
  []
 
 
-Overfull \hbox (17.25pt too wide) in paragraph at lines 8693--8693
+Overfull \hbox (17.25pt too wide) in paragraph at lines 8701--8701
 []\TU/lmtt/m/n/10 ##  gf / wt        0.440 0.186 Inf     0.192      1.01 -1.941
   0.0523[] 
  []
 
 
-Overfull \hbox (17.25pt too wide) in paragraph at lines 8693--8693
+Overfull \hbox (17.25pt too wide) in paragraph at lines 8701--8701
 []\TU/lmtt/m/n/10 ##  iap_mo / wt    0.857 0.332 Inf     0.401      1.83 -0.398
   0.6904[] 
  []
 
 
-Overfull \hbox (17.25pt too wide) in paragraph at lines 8693--8693
+Overfull \hbox (17.25pt too wide) in paragraph at lines 8701--8701
 []\TU/lmtt/m/n/10 ##  iap_mo / gf    1.946 0.933 Inf     0.761      4.98  1.389
   0.1647[] 
  []
 
 
-Overfull \hbox (17.25pt too wide) in paragraph at lines 8693--8693
+Overfull \hbox (17.25pt too wide) in paragraph at lines 8701--8701
 []\TU/lmtt/m/n/10 ##  sox10 / wt     2.743 0.785 Inf     1.566      4.81  3.526
   0.0004[] 
  []
 
 
-Overfull \hbox (17.25pt too wide) in paragraph at lines 8693--8693
+Overfull \hbox (17.25pt too wide) in paragraph at lines 8701--8701
 []\TU/lmtt/m/n/10 ##  sox10 / gf     6.231 2.501 Inf     2.837     13.68  4.558
   <.0001[] 
  []
 
 
-Overfull \hbox (17.25pt too wide) in paragraph at lines 8693--8693
+Overfull \hbox (17.25pt too wide) in paragraph at lines 8701--8701
 []\TU/lmtt/m/n/10 ##  sox10 / iap_mo 3.202 1.167 Inf     1.567      6.54  3.192
   0.0014[] 
  []
@@ -1851,13 +1851,13 @@ lot-1.pdf Graphic file (type pdf)
 <use Walker-elementary-statistical-modeling-draft_files/figure-latex/plot-nb-pl
 ot-1.pdf>
 [191]
-Underfull \hbox (badness 1681) in paragraph at lines 8779--8785
+Underfull \hbox (badness 1681) in paragraph at lines 8792--8798
 \TU/lmr/m/n/10 In this section, I show how to add \TU/lmr/m/it/10 p\TU/lmr/m/n/
 10 -values to a ggpubr plot using
  []
 
 
-Underfull \hbox (badness 1097) in paragraph at lines 8779--8785
+Underfull \hbox (badness 1097) in paragraph at lines 8792--8798
 \TU/lmtt/m/n/10 stat_compare_means\TU/lmr/m/n/10 . Because this function has on
 ly a limited set of
  []
@@ -1867,7 +1867,7 @@ lues-1.pdf Graphic file (type pdf)
 <use Walker-elementary-statistical-modeling-draft_files/figure-latex/plot-p-val
 ues-1.pdf>
 [192] [193]
-Overfull \hbox (28.01001pt too wide) in paragraph at lines 8922--8932
+Overfull \hbox (28.01001pt too wide) in paragraph at lines 8935--8945
 []\TU/lmr/m/n/10 The script to extract the pair of group labels \TU/lmtt/m/n/10
  str_split(m1.pvalues$contrast,
  []
@@ -1877,6 +1877,9 @@ File: Walker-elementary-statistical-modeling-draft_files/figure-latex/plot-manu
 al-p-values-1.pdf Graphic file (type pdf)
 <use Walker-elementary-statistical-modeling-draft_files/figure-latex/plot-manua
 l-p-values-1.pdf>
+
+Underfull \vbox (badness 1360) has occurred while \output is active []
+
 [195]
 File: Walker-elementary-statistical-modeling-draft_files/figure-latex/unnamed-c
 hunk-66-1.pdf Graphic file (type pdf)
@@ -1917,14 +1920,14 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [201] [202]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <24.88> on input line 9181.
+(Font)              <24.88> on input line 9192.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <20.74> on input line 9181.
+(Font)              <20.74> on input line 9192.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <17.28> on input line 9181.
+(Font)              <17.28> on input line 9192.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 9183.
+(hyperref)                removing `math shift' on input line 9194.
 
 [203
 
@@ -1943,7 +1946,7 @@ ot2-1.pdf Graphic file (type pdf)
 t2-1.pdf>
 [206]
 
-LaTeX Warning: Reference `eq:ancova-2' on page 207 undefined on input line 9295
+LaTeX Warning: Reference `eq:ancova-2' on page 207 undefined on input line 9306
 .
 
 
@@ -1988,7 +1991,7 @@ m1-1.pdf Graphic file (type pdf)
 <use Walker-elementary-statistical-modeling-draft_files/figure-latex/ancova-sim
 1-1.pdf>
 
-LaTeX Warning: Reference `eq:ancova-5' on page 213 undefined on input line 9590
+LaTeX Warning: Reference `eq:ancova-5' on page 213 undefined on input line 9601
 .
 
 
@@ -2040,7 +2043,7 @@ Overfull \hbox (29.95395pt too wide) has occurred while \output is active
 [222]
 
 LaTeX Warning: Reference `factorial-what-are-coefficients-plot' on page 223 und
-efined on input line 9918.
+efined on input line 9929.
 
 File: Walker-elementary-statistical-modeling-draft_files/figure-latex/factorial
 -what-are-coefficients-plot-1.pdf Graphic file (type pdf)
@@ -2092,79 +2095,79 @@ Overfull \hbox (29.95395pt too wide) has occurred while \output is active
  []
 
 [236] [237]
-Overfull \hbox (33.0pt too wide) in paragraph at lines 10758--10758
+Overfull \hbox (33.0pt too wide) in paragraph at lines 10769--10769
 []\TU/lmtt/m/n/10 ##  contrast          estimate   SE df lower.CL upper.CL t.ra
 tio p.value[] 
  []
 
 
-Overfull \hbox (27.75pt too wide) in paragraph at lines 10758--10758
+Overfull \hbox (27.75pt too wide) in paragraph at lines 10769--10769
 []\TU/lmtt/m/n/10 ##  18,400 - 13,400      4.510 1.03 20    2.370    6.650  4.3
 95  0.0003[] 
  []
 
 
-Overfull \hbox (27.75pt too wide) in paragraph at lines 10758--10758
+Overfull \hbox (27.75pt too wide) in paragraph at lines 10769--10769
 []\TU/lmtt/m/n/10 ##  13,1100 - 13,400    -0.317 1.03 20   -2.457    1.824 -0.3
 09  0.7608[] 
  []
 
 
-Overfull \hbox (27.75pt too wide) in paragraph at lines 10758--10758
+Overfull \hbox (27.75pt too wide) in paragraph at lines 10769--10769
 []\TU/lmtt/m/n/10 ##  13,1100 - 18,400    -4.827 1.03 20   -6.967   -2.686 -4.7
 04  0.0001[] 
  []
 
 
-Overfull \hbox (27.75pt too wide) in paragraph at lines 10758--10758
+Overfull \hbox (27.75pt too wide) in paragraph at lines 10769--10769
 []\TU/lmtt/m/n/10 ##  18,1100 - 13,400     1.508 1.03 20   -0.632    3.649  1.4
 70  0.1571[] 
  []
 
 
-Overfull \hbox (27.75pt too wide) in paragraph at lines 10758--10758
+Overfull \hbox (27.75pt too wide) in paragraph at lines 10769--10769
 []\TU/lmtt/m/n/10 ##  18,1100 - 18,400    -3.002 1.03 20   -5.142   -0.861 -2.9
 25  0.0084[] 
  []
 
 
-Overfull \hbox (27.75pt too wide) in paragraph at lines 10758--10758
+Overfull \hbox (27.75pt too wide) in paragraph at lines 10769--10769
 []\TU/lmtt/m/n/10 ##  18,1100 - 13,1100    1.825 1.03 20   -0.315    3.965  1.7
 79  0.0905[] 
  []
 
 
-Overfull \hbox (48.75pt too wide) in paragraph at lines 10786--10786
+Overfull \hbox (48.75pt too wide) in paragraph at lines 10797--10797
 []\TU/lmtt/m/n/10 ##  CO2  Temp contrast   estimate   SE df lower.CL upper.CL t
 .ratio p.value[] 
  []
 
 
-Overfull \hbox (43.5pt too wide) in paragraph at lines 10786--10786
+Overfull \hbox (43.5pt too wide) in paragraph at lines 10797--10797
 []\TU/lmtt/m/n/10 ##  400  .    18 - 13       4.510 1.03 20    2.370    6.650  
 4.395  0.0003[] 
  []
 
 
-Overfull \hbox (43.5pt too wide) in paragraph at lines 10786--10786
+Overfull \hbox (43.5pt too wide) in paragraph at lines 10797--10797
 []\TU/lmtt/m/n/10 ##  1100 .    18 - 13       1.825 1.03 20   -0.315    3.965  
 1.779  0.0905[] 
  []
 
 
-Overfull \hbox (43.5pt too wide) in paragraph at lines 10786--10786
+Overfull \hbox (43.5pt too wide) in paragraph at lines 10797--10797
 []\TU/lmtt/m/n/10 ##  .    13   1100 - 400   -0.317 1.03 20   -2.457    1.824 -
 0.309  0.7608[] 
  []
 
 
-Overfull \hbox (43.5pt too wide) in paragraph at lines 10786--10786
+Overfull \hbox (43.5pt too wide) in paragraph at lines 10797--10797
 []\TU/lmtt/m/n/10 ##  .    18   1100 - 400   -3.002 1.03 20   -5.142   -0.861 -
 2.925  0.0084[] 
  []
 
 
-Overfull \hbox (17.25pt too wide) in paragraph at lines 10800--10800
+Overfull \hbox (17.25pt too wide) in paragraph at lines 10811--10811
 []\TU/lmtt/m/n/10 ## NOTE: Results may be misleading due to involvement in inte
 ractions[] 
  []
@@ -2176,31 +2179,31 @@ Overfull \hbox (29.95395pt too wide) has occurred while \output is active
  []
 
 [238]
-Overfull \hbox (17.25pt too wide) in paragraph at lines 10828--10828
+Overfull \hbox (17.25pt too wide) in paragraph at lines 10839--10839
 []\TU/lmtt/m/n/10 ## NOTE: Results may be misleading due to involvement in inte
 ractions[] 
  []
 
 
-Overfull \hbox (1.5pt too wide) in paragraph at lines 10846--10846
+Overfull \hbox (1.5pt too wide) in paragraph at lines 10857--10857
 []\TU/lmtt/m/n/10 ##  contrast   estimate    SE df lower.CL upper.CL t.ratio p.
 value[] 
  []
 
 
-Overfull \hbox (22.5pt too wide) in paragraph at lines 10864--10864
+Overfull \hbox (22.5pt too wide) in paragraph at lines 10875--10875
 []\TU/lmtt/m/n/10 ##      contrast  estimate        SE df  lower.CL   upper.CL 
   t.ratio[] 
  []
 
 
-Overfull \hbox (22.5pt too wide) in paragraph at lines 10864--10864
+Overfull \hbox (22.5pt too wide) in paragraph at lines 10875--10875
 []\TU/lmtt/m/n/10 ## 1:    18 - 13  3.167500 0.7255577 20  1.654013  4.6809869 
  4.365607[] 
  []
 
 
-Overfull \hbox (22.5pt too wide) in paragraph at lines 10864--10864
+Overfull \hbox (22.5pt too wide) in paragraph at lines 10875--10875
 []\TU/lmtt/m/n/10 ## 2: 1100 - 400 -1.659167 0.7255577 20 -3.172654 -0.1456798 
 -2.286747[] 
  []
@@ -2217,11 +2220,11 @@ Overfull \hbox (29.95395pt too wide) has occurred while \output is active
  []
 
 [240]
-Underfull \vbox (badness 10000) detected at line 10960
+Underfull \vbox (badness 10000) detected at line 10971
  []
 
 
-Underfull \vbox (badness 10000) detected at line 10960
+Underfull \vbox (badness 10000) detected at line 10971
  []
 
 [241]
@@ -2250,7 +2253,7 @@ Overfull \hbox (29.95395pt too wide) has occurred while \output is active
  []
 
 [244]
-Underfull \hbox (badness 2302) in paragraph at lines 11064--11075
+Underfull \hbox (badness 2302) in paragraph at lines 11075--11086
 []\TU/lmr/m/n/10 This effects plot shows the four simple effects, the single in
 teraction
  []
@@ -2272,7 +2275,7 @@ Overfull \hbox (29.95395pt too wide) has occurred while \output is active
 File: images/frew_fig_4b.png Graphic file (type bmp)
 <images/frew_fig_4b.png>
 
-Underfull \hbox (badness 1371) in paragraph at lines 11144--11147
+Underfull \hbox (badness 1371) in paragraph at lines 11155--11158
 []\TU/lmr/bx/n/10 Filename \TU/lmr/m/n/10 “Data file for Dryad.xlsx” \TU/lmr/bx
 /n/10 sheet \TU/lmr/m/n/10 “Data” **Source*:** []$[][][][][] []
  []
@@ -2303,7 +2306,7 @@ Chapter 17.
 [275
 
 ]
-Underfull \hbox (badness 4634) in paragraph at lines 12748--12748
+Underfull \hbox (badness 4634) in paragraph at lines 12759--12759
 []\TU/lmr/bx/n/14.4 Model building vs. Variable selection
  []
 
@@ -2315,7 +2318,7 @@ Underfull \hbox (badness 4634) in paragraph at lines 12748--12748
 Chapter 18.
 [279] [280] [281] [282] [283] [284]
 
-LaTeX Warning: Reference `lmm-spec1b' on page 285 undefined on input line 13100
+LaTeX Warning: Reference `lmm-spec1b' on page 285 undefined on input line 13111
 .
 
 File: Walker-elementary-statistical-modeling-draft_files/figure-latex/lmm1-bloc
@@ -2351,127 +2354,127 @@ Overfull \hbox (154.03014pt too wide) has occurred while \output is active
  []
 
 [299]
-Overfull \hbox (23.70999pt too wide) in paragraph at lines 13948--13952
+Overfull \hbox (23.70999pt too wide) in paragraph at lines 13959--13963
 []\TU/lmr/m/n/10 add a random slope and intercept using \TU/lmtt/m/n/10 y ~ tre
 atment + (treatment|block)\TU/lmr/m/n/10 .
  []
 
 [300]
-Overfull \hbox (22.5pt too wide) in paragraph at lines 14040--14040
+Overfull \hbox (22.5pt too wide) in paragraph at lines 14051--14051
 []\TU/lmtt/m/n/10 ##  sediment vermetids contrast           estimate    SE   df
  lower.CL[] 
  []
 
 
-Overfull \hbox (22.5pt too wide) in paragraph at lines 14040--14040
+Overfull \hbox (22.5pt too wide) in paragraph at lines 14051--14051
 []\TU/lmtt/m/n/10 ##  control  .         present - absent    0.00466 0.209 23.0
    -0.428[] 
  []
 
 
-Overfull \hbox (22.5pt too wide) in paragraph at lines 14040--14040
+Overfull \hbox (22.5pt too wide) in paragraph at lines 14051--14051
 []\TU/lmtt/m/n/10 ##  addition .         present - absent   -0.76889 0.217 23.6
    -1.217[] 
  []
 
 
-Overfull \hbox (22.5pt too wide) in paragraph at lines 14040--14040
+Overfull \hbox (22.5pt too wide) in paragraph at lines 14051--14051
 []\TU/lmtt/m/n/10 ##  .        absent    addition - control  0.28520 0.217 23.6
    -0.163[] 
  []
 
 
-Overfull \hbox (22.5pt too wide) in paragraph at lines 14040--14040
+Overfull \hbox (22.5pt too wide) in paragraph at lines 14051--14051
 []\TU/lmtt/m/n/10 ##  .        present   addition - control -0.48834 0.209 23.0
    -0.921[] 
  []
 
 [301]
-Overfull \hbox (22.5pt too wide) in paragraph at lines 14079--14079
+Overfull \hbox (22.5pt too wide) in paragraph at lines 14090--14090
 []\TU/lmtt/m/n/10 ##  sediment vermetids contrast           estimate    SE   df
  lower.CL[] 
  []
 
 
-Overfull \hbox (22.5pt too wide) in paragraph at lines 14079--14079
+Overfull \hbox (22.5pt too wide) in paragraph at lines 14090--14090
 []\TU/lmtt/m/n/10 ##  control  .         present - absent    0.00466 0.209 22.9
    -0.428[] 
  []
 
 
-Overfull \hbox (22.5pt too wide) in paragraph at lines 14079--14079
+Overfull \hbox (22.5pt too wide) in paragraph at lines 14090--14090
 []\TU/lmtt/m/n/10 ##  addition .         present - absent   -0.76889 0.216 23.5
    -1.215[] 
  []
 
 
-Overfull \hbox (22.5pt too wide) in paragraph at lines 14079--14079
+Overfull \hbox (22.5pt too wide) in paragraph at lines 14090--14090
 []\TU/lmtt/m/n/10 ##  .        absent    addition - control  0.28520 0.216 23.5
    -0.161[] 
  []
 
 
-Overfull \hbox (22.5pt too wide) in paragraph at lines 14079--14079
+Overfull \hbox (22.5pt too wide) in paragraph at lines 14090--14090
 []\TU/lmtt/m/n/10 ##  .        present   addition - control -0.48834 0.209 22.9
    -0.921[] 
  []
 
 
-Overfull \hbox (17.25pt too wide) in paragraph at lines 14106--14106
+Overfull \hbox (17.25pt too wide) in paragraph at lines 14117--14117
 []\TU/lmtt/m/n/10 ##                                       Estimate Std. Error 
       df[] 
  []
 
 
-Overfull \hbox (17.25pt too wide) in paragraph at lines 14106--14106
+Overfull \hbox (17.25pt too wide) in paragraph at lines 14117--14117
 []\TU/lmtt/m/n/10 ## (Intercept)                        1.268411111  0.1541680 
 30.42768[] 
  []
 
 
-Overfull \hbox (17.25pt too wide) in paragraph at lines 14106--14106
+Overfull \hbox (17.25pt too wide) in paragraph at lines 14117--14117
 []\TU/lmtt/m/n/10 ## vermetidspresent                   0.004655556  0.2091398 
 22.94243[] 
  []
 
 
-Overfull \hbox (17.25pt too wide) in paragraph at lines 14106--14106
+Overfull \hbox (17.25pt too wide) in paragraph at lines 14117--14117
 []\TU/lmtt/m/n/10 ## sedimentaddition                   0.285202305  0.2160126 
 23.53130[] 
  []
 
 
-Overfull \hbox (17.25pt too wide) in paragraph at lines 14106--14106
+Overfull \hbox (17.25pt too wide) in paragraph at lines 14117--14117
 []\TU/lmtt/m/n/10 ## vermetidspresent:sedimentaddition -0.773546750  0.3006674 
 23.24638[] 
  []
 
 [302]
-Overfull \hbox (17.25pt too wide) in paragraph at lines 14125--14125
+Overfull \hbox (17.25pt too wide) in paragraph at lines 14136--14136
 []\TU/lmtt/m/n/10 ##                                       Estimate Std. Error 
       df[] 
  []
 
 
-Overfull \hbox (17.25pt too wide) in paragraph at lines 14125--14125
+Overfull \hbox (17.25pt too wide) in paragraph at lines 14136--14136
 []\TU/lmtt/m/n/10 ## (Intercept)                        1.268411111  0.1541680 
 30.43671[] 
  []
 
 
-Overfull \hbox (17.25pt too wide) in paragraph at lines 14125--14125
+Overfull \hbox (17.25pt too wide) in paragraph at lines 14136--14136
 []\TU/lmtt/m/n/10 ## vermetidspresent                   0.004655556  0.2091398 
 23.03604[] 
  []
 
 
-Overfull \hbox (17.25pt too wide) in paragraph at lines 14125--14125
+Overfull \hbox (17.25pt too wide) in paragraph at lines 14136--14136
 []\TU/lmtt/m/n/10 ## sedimentaddition                   0.285202305  0.2167687 
 23.62024[] 
  []
 
 
-Overfull \hbox (17.25pt too wide) in paragraph at lines 14125--14125
+Overfull \hbox (17.25pt too wide) in paragraph at lines 14136--14136
 []\TU/lmtt/m/n/10 ## vermetidspresent:sedimentaddition -0.773546750  0.3012111 
 23.33762[] 
  []
@@ -2491,7 +2494,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 3746) has occurred while \output is active []
 
 [306] [307] [308]
-Overfull \hbox (29.7003pt too wide) detected at line 14335
+Overfull \hbox (29.7003pt too wide) detected at line 14346
 []
  []
 
@@ -2526,7 +2529,7 @@ EYES OF THREESPINE STICKLEBACK FISH \TU/lmr/m/n/10 311
 [311] [312]
 
 LaTeX Warning: Reference `fig:glm1-poisson' on page 313 undefined on input line
- 14468.
+ 14479.
 
 File: Walker-elementary-statistical-modeling-draft_files/figure-latex/glm1-pois
 son-1.pdf Graphic file (type pdf)
@@ -2539,7 +2542,7 @@ EYES OF THREESPINE STICKLEBACK FISH \TU/lmr/m/n/10 313
  []
 
 [313]
-Overfull \hbox (72.50146pt too wide) detected at line 14520
+Overfull \hbox (72.50146pt too wide) detected at line 14531
 []
  []
 
@@ -2563,7 +2566,7 @@ File: Walker-elementary-statistical-modeling-draft_files/figure-latex/glm1-worm
 <use Walker-elementary-statistical-modeling-draft_files/figure-latex/glm1-worm-
 poisson-dispersion-plot-1.pdf>
 
-Overfull \hbox (62.51361pt too wide) detected at line 14666
+Overfull \hbox (62.51361pt too wide) detected at line 14677
 []
  []
 
@@ -2578,49 +2581,49 @@ EYES OF THREESPINE STICKLEBACK FISH \TU/lmr/m/n/10 317
  []
 
 [317] [318]
-Overfull \hbox (33.0pt too wide) in paragraph at lines 14748--14748
+Overfull \hbox (33.0pt too wide) in paragraph at lines 14759--14759
 []\TU/lmtt/m/n/10 ##  contrast              estimate    SE  df asymp.LCL asymp.
 UCL z.ratio[] 
  []
 
 
-Overfull \hbox (27.75pt too wide) in paragraph at lines 14748--14748
+Overfull \hbox (27.75pt too wide) in paragraph at lines 14759--14759
 []\TU/lmtt/m/n/10 ##  Uninfected - Control    -0.317 0.136 Inf    -0.583   -0.0
 514 -2.339[] 
  []
 
 
-Overfull \hbox (27.75pt too wide) in paragraph at lines 14748--14748
+Overfull \hbox (27.75pt too wide) in paragraph at lines 14759--14759
 []\TU/lmtt/m/n/10 ##  Infected LG - Control   -0.197 0.158 Inf    -0.507    0.1
 126 -1.248[] 
  []
 
 
-Overfull \hbox (27.75pt too wide) in paragraph at lines 14748--14748
+Overfull \hbox (27.75pt too wide) in paragraph at lines 14759--14759
 []\TU/lmtt/m/n/10 ##  Infected HG - Control    0.540 0.108 Inf     0.329    0.7
 504  5.019[] 
  []
 
 
-Overfull \hbox (22.5pt too wide) in paragraph at lines 14767--14767
+Overfull \hbox (22.5pt too wide) in paragraph at lines 14778--14778
 []\TU/lmtt/m/n/10 ##  contrast              ratio     SE  df asymp.LCL asymp.UC
 L z.ratio[] 
  []
 
 
-Overfull \hbox (17.25pt too wide) in paragraph at lines 14767--14767
+Overfull \hbox (17.25pt too wide) in paragraph at lines 14778--14778
 []\TU/lmtt/m/n/10 ##  Uninfected / Control  0.728 0.0988 Inf     0.558      0.9
 5 -2.339[] 
  []
 
 
-Overfull \hbox (17.25pt too wide) in paragraph at lines 14767--14767
+Overfull \hbox (17.25pt too wide) in paragraph at lines 14778--14778
 []\TU/lmtt/m/n/10 ##  Infected LG / Control 0.821 0.1298 Inf     0.602      1.1
 2 -1.248[] 
  []
 
 
-Overfull \hbox (17.25pt too wide) in paragraph at lines 14767--14767
+Overfull \hbox (17.25pt too wide) in paragraph at lines 14778--14778
 []\TU/lmtt/m/n/10 ##  Infected HG / Control 1.715 0.1845 Inf     1.389      2.1
 2  5.019[] 
  []
@@ -2644,7 +2647,7 @@ unk-111-1.pdf>
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [322]
-Overfull \hbox (6.75pt too wide) in paragraph at lines 14942--14942
+Overfull \hbox (6.75pt too wide) in paragraph at lines 14953--14953
 []\TU/lmtt/m/n/10 ##  DHARMa nonparametric dispersion test via mean deviance re
 sidual[] 
  []
@@ -2657,25 +2660,25 @@ g-in-r-2-1.pdf>
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [323]
-Overfull \hbox (33.0pt too wide) in paragraph at lines 14994--14994
+Overfull \hbox (33.0pt too wide) in paragraph at lines 15005--15005
 []\TU/lmtt/m/n/10 ##  contrast              estimate    SE  df asymp.LCL asymp.
 UCL z.ratio[] 
  []
 
 
-Overfull \hbox (27.75pt too wide) in paragraph at lines 14994--14994
+Overfull \hbox (27.75pt too wide) in paragraph at lines 15005--15005
 []\TU/lmtt/m/n/10 ##  Uninfected - Control    -0.317 0.136 Inf    -0.583   -0.0
 514 -2.339[] 
  []
 
 
-Overfull \hbox (27.75pt too wide) in paragraph at lines 14994--14994
+Overfull \hbox (27.75pt too wide) in paragraph at lines 15005--15005
 []\TU/lmtt/m/n/10 ##  Infected LG - Control   -0.197 0.158 Inf    -0.507    0.1
 126 -1.248[] 
  []
 
 
-Overfull \hbox (27.75pt too wide) in paragraph at lines 14994--14994
+Overfull \hbox (27.75pt too wide) in paragraph at lines 15005--15005
 []\TU/lmtt/m/n/10 ##  Infected HG - Control    0.540 0.108 Inf     0.329    0.7
 504  5.019[] 
  []
@@ -2684,25 +2687,25 @@ Overfull \hbox (27.75pt too wide) in paragraph at lines 14994--14994
 Underfull \vbox (badness 1142) has occurred while \output is active []
 
 [324]
-Overfull \hbox (22.5pt too wide) in paragraph at lines 15017--15017
+Overfull \hbox (22.5pt too wide) in paragraph at lines 15028--15028
 []\TU/lmtt/m/n/10 ##  contrast              ratio     SE  df asymp.LCL asymp.UC
 L z.ratio[] 
  []
 
 
-Overfull \hbox (17.25pt too wide) in paragraph at lines 15017--15017
+Overfull \hbox (17.25pt too wide) in paragraph at lines 15028--15028
 []\TU/lmtt/m/n/10 ##  Uninfected / Control  0.728 0.0988 Inf     0.558      0.9
 5 -2.339[] 
  []
 
 
-Overfull \hbox (17.25pt too wide) in paragraph at lines 15017--15017
+Overfull \hbox (17.25pt too wide) in paragraph at lines 15028--15028
 []\TU/lmtt/m/n/10 ##  Infected LG / Control 0.821 0.1298 Inf     0.602      1.1
 2 -1.248[] 
  []
 
 
-Overfull \hbox (17.25pt too wide) in paragraph at lines 15017--15017
+Overfull \hbox (17.25pt too wide) in paragraph at lines 15028--15028
 []\TU/lmtt/m/n/10 ##  Infected HG / Control 1.715 0.1845 Inf     1.389      2.1
 2  5.019[] 
  []
@@ -2742,7 +2745,7 @@ Overfull \hbox (1.52562pt too wide) has occurred while \output is active
 [334
 
 ] [335]
-Underfull \vbox (badness 10000) detected at line 15359
+Underfull \vbox (badness 10000) detected at line 15370
  []
 
 
@@ -2755,11 +2758,11 @@ Overfull \hbox (1.52562pt too wide) has occurred while \output is active
  []
 
 [336]
-Underfull \vbox (badness 10000) detected at line 15359
+Underfull \vbox (badness 10000) detected at line 15370
  []
 
 
-Underfull \vbox (badness 10000) detected at line 15359
+Underfull \vbox (badness 10000) detected at line 15370
  []
 
 
@@ -2782,18 +2785,18 @@ Package natbib Warning: Empty `thebibliography' environment on input line 3.
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 15364.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 15375.
 [339
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 15364.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 15375.
 (./Walker-elementary-statistical-modeling-draft.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 15364.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 15364
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 15375.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 15375
 .
 Package rerunfilecheck Info: File `Walker-elementary-statistical-modeling-draft
 .out' has not changed.
-(rerunfilecheck)             Checksum: E33BAE156DBAABFD88F60F1C4B0071F8.
+(rerunfilecheck)             Checksum: AC2237F9F4389DFD1A2B7478E310BED6.
 
 LaTeX Warning: There were undefined references.
 
@@ -2802,10 +2805,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 23447 strings out of 492970
- 464961 string characters out of 6133938
- 609476 words of memory out of 5000000
- 27092 multiletter control sequences out of 15000+600000
+ 23446 strings out of 492970
+ 464952 string characters out of 6133938
+ 609390 words of memory out of 5000000
+ 27091 multiletter control sequences out of 15000+600000
  603002 words of font info for 116 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  45i,11n,54p,10485b,475s stack positions out of 5000i,500n,10000p,200000b,80000s

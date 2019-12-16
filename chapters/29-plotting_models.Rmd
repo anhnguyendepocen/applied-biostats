@@ -292,6 +292,7 @@ m1.emm
 
 * We specify the means that we want to estimate with "specs =". Here, we want to estimate the means of the levels of $donor$.
 * Because the linear predictor of the model is on the log scale, we use the "type" argument to specify that we want the means to be backtransformed to the **response scale**, which is the scale of the measurement (number of cells)
+* It can be useful to convert the emmeans table m1.emm to a data.table (or data.frame or tibble) using `m1.emm <- data.table(m1.emm)`. **Bug alert** If you do this, the object cannot be passed to the next step, the `contrast` function. So if you want the emmeans table as a data.table, assign it to a different name, for example `m1.emm_dt <- data.table(m1.emm)`.
 
 **Step 3: Compute the contrasts, with p-values and confidence levels**. Contrasts among levels, or combinations of levels, are computed by passing the emmeans object (m1.emm) to the `contrast` function.
 
@@ -305,6 +306,7 @@ m1.pairs
 * I use the "adjust" argument to specify no *p*-value adjustment for multiple tests.
 * the contrast object is then piped (%>%) to the summary function, where I pass to the argument "infer", that I want both the confidence intervals (the first TRUE) and *p*-values (the second TRUE)
 * this step isn't necessary if we were plotting only modeled means and CIs but 1) we almost always want contrasts with a fit model and so that is done here as part of the uninterrupted work flow that this book advocates and 2) we do  use the *p*-values and CIs from this table (m1.pairs) in the final plot below.
+* **Bug alert** again, the emmeans table m1.emm must be passed to `contrast` as an emmeans object. If you have converted this object to a data.table, you will get an error. See the last note in Step 2. 
 
 **Step 4: Plot the modeled means and 95% error intervals**.
 
@@ -331,8 +333,8 @@ gg.nb
 Some notes on the plot code
 
 * A column name passed to a `ggpubr` function must be in quotes but a column name passed to a `ggplot2` function cannot be in quotes
-* **This is very important**. The data passed to ggplot2 must be a data.frame. In order for the ggplot2 functions to use the m1.emm object, the object has to be passed as `summary(m1.emm)`.
-* **This is very important**. The name of the y-axis variable in the `ggstripchart` function is "count", because the function is using a column from the data.table exp2d. The name of the y-axis variable in the `geom_errorbar` and `geom_point` functions is "response" which is the name given to the expected value of the response (which is $count$) in the m1.emm object. This column takes different names depending on the fit object sent to the `emmeans` function. Importantly, because the y-axis in the `geom_errorbar` and `geom_point` functions has a different name then the name of the y-axis variable used to create the basic plot, the name of the y-axis column has to be specified.
+* **Bug alert**. The data passed to ggplot2 must be a data.frame. In order for the ggplot2 functions to use the m1.emm object, the object has to be passed as `summary(m1.emm)`.
+* **Bug alert**. The name of the y-axis variable in the `ggstripchart` function is "count", because the function is using a column from the data.table exp2d. The name of the y-axis variable in the `geom_errorbar` and `geom_point` functions is "response" which is the name given to the expected value of the response (which is $count$) in the m1.emm object. This column takes different names depending on the fit object sent to the `emmeans` function. Importantly, because the y-axis in the `geom_errorbar` and `geom_point` functions has a different name then the name of the y-axis variable used to create the basic plot, the name of the y-axis column has to be specified.
 
 ### Adding p-values
 
@@ -413,7 +415,7 @@ m1.pvalues[, group2 := groups[even(1:length(groups))]]
 m1.pvalues[, p := pvalString(p.value)]
 ```
 
-**Important** notes on the script to build the p-value table, if you don't want your code to fail.
+**Bug alert** notes on the script to build the p-value table, if you don't want your code to fail.
 
 * The script to extract the pair of group labels `str_split(m1.pvalues$contrast, " / "))` has to be written so that the characters within the quotes matches the characters separating the groups in the "contrast" column of the contrast table (here, m1.pairs). This will typically be either a space-minus-space or a space-slash-space. If the model fit is `lm` and the response is not transformed, then the correct code is `str_split(m1.pvalues$contrast, " - "))`. Regardless, look at the table to check. 
 * In step 3 above, we took the contrast table object and passed it to the function `summary`, which converts the contrast table object to a data.frame. If we had skipped this step, `data.table(m1.pairs)` would fail. Instead, we'd have to use `data.table(summary(m1.pairs))`.
@@ -580,4 +582,3 @@ gg4 <- ggdotplot(x = "donor",
 plot_grid(gg1, gg2, gg3, gg4, nrow=2)
 ```
 
-##
