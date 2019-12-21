@@ -310,6 +310,8 @@ m1.pairs
 
 **Step 4: Plot the modeled means and 95% error intervals**.
 
+The code below first creates the stripchart using the ggpubr function and then adds the confidence intervals using `geom_errorbar` and means using `geom_point`. The stripchart uses the data in the exp2d data.table. The errorbar and mean use the values in m1.emm object created by the `emmeans` function. The `geom_errorbar` and `geom_point` functions require an "aesthetic" to tell ggplot which column contains the y values of the points to plot (the "x" values are still in the column "donor", which is a column in both the exp2d data.table and m1.emm). The name of the column containing the "y" values in m1.emm is "response".
+
 ```{r plot-nb-plot, warning=FALSE, message=FALSE, fig.cap="Modeled means and 95% confidence interval computed from a negative binomial generalized linear model."}
 set.seed(1)
 gg.nb <- ggstripchart(data=exp2d,
@@ -334,7 +336,7 @@ Some notes on the plot code
 
 * A column name passed to a `ggpubr` function must be in quotes but a column name passed to a `ggplot2` function cannot be in quotes
 * **Bug alert**. The data passed to ggplot2 must be a data.frame. In order for the ggplot2 functions to use the m1.emm object, the object has to be passed as `summary(m1.emm)`.
-* **Bug alert**. The name of the y-axis variable in the `ggstripchart` function is "count", because the function is using a column from the data.table exp2d. The name of the y-axis variable in the `geom_errorbar` and `geom_point` functions is "response" which is the name given to the expected value of the response (which is $count$) in the m1.emm object. This column takes different names depending on the fit object sent to the `emmeans` function. Importantly, because the y-axis in the `geom_errorbar` and `geom_point` functions has a different name then the name of the y-axis variable used to create the basic plot, the name of the y-axis column has to be specified.
+* **Bug alert**. Because the m1.emm table does not have a column named "count", which is the "y" column specified in `ggstripchart`, you must supply a new "y" column name to the `aes` function of `geom_errorbar` and `geom_point`. This is the name of the column in the emmeans table containing the modeled means. In m1.emm, this name is "response" but it can take different names in different emmeans tables, depending on the fit model.
 
 ### Adding p-values
 

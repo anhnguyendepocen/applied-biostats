@@ -1,4 +1,4 @@
-# Data -- Reading, Writing, and Wrangling
+# Data -- Reading, Wrangling, and Writing
 
 ```{r data-setup, echo=FALSE, message=FALSE, warning=FALSE}
 knitr::opts_chunk$set(fig.width=6, fig.height=4) 
@@ -79,6 +79,11 @@ output_path <- "output" # path to data that are saved
 image_path <- "images" # path to image folder
 ```
 
+Note on the script above
+1. Be kind to the future you by loading only the packages necessary for the code in the R Markdown file that you are working on. If your default is to load everything, the future you will be confused why something was installed.
+2. Be kind to the future you by commenting on why a package is loaded; usually this is a specific function from the package
+3. `here <- here::here` is my favorite script ever. What is it doing? One can read this as "assign the function here from the here package to the object here" (this is reading the script right to left). Why do this? It turns out the multiple packages define a function called "here". If any of these packages are loaded after the here package, then `here` from here won't work -- it will be replaced by `here` from the more recently loaded package. To make sure that `here` uses the function from the here package, I simply reassign `here` from the here package to the objeect "here" *after* loading in all packages.
+
 ## Importing data
 
 Throughout this book, we will download data from the [Dryad Digital Repository](https://datadryad.org){target="_blank"}, which is a major resource for increasing reproducibility in science. My own view is that *all data* should be archived on some public server (exceptions include data that are proprietary or contain sensitive information -- such as human health measures).
@@ -104,9 +109,9 @@ The code below uses the function `read_excel()` from the package readxl. More ab
 ```{r data-tests, echo=FALSE, eval=FALSE}
 #bee <- read.csv(file.choose())
 
-# data_folder <- "Data from Neonicotinoid pesticide reduces bumblebee colony growth and queen production"
+# folder <- "Data from Neonicotinoid pesticide reduces bumblebee colony growth and queen production"
 # filename <- "Whitehorn, O'Connor, Wackers, Goulson (2012) Data from 'Neonicotinoid pesticide reduces bumblebee colony growth and queen production'.csv.csv"
-# file_path <- here(data_path, data_folder, filename)
+# file_path <- here(data_path, folder, filename)
 # bee <- fread(file_path, header=TRUE)
 
 RSBL_2013_0432_vole_data <- read_excel("data/Data from Deleterious consequences of antioxidant supplementation on lifespan in a wild-derived mammal/RSBL-2013-0432 vole data.xlsx", 
@@ -115,10 +120,10 @@ View(RSBL_2013_0432_vole_data)
 ```
 
 ```{r data-chick-xls}
-data_folder <- "Data from Prenatal acoustic communication programs offspring for high post-hatching temperatures in a songbird"
+folder <- "Data from Prenatal acoustic communication programs offspring for high post-hatching temperatures in a songbird"
 fn <- "allDatasetsMarietteBuchanan2016.xls"
-file_path <- here(data_path, data_folder, fn)
-#file_path <- paste(data_path, data_folder, fn, sep="/")
+file_path <- here(data_path, folder, fn)
+#file_path <- paste(data_path, folder, fn, sep="/")
 chick <- read_excel(file_path, sheet="nestlingMass") # read the excel file
 chick <- data.table(chick) # convert to data.table
 ```
@@ -126,24 +131,10 @@ chick <- data.table(chick) # convert to data.table
 In this book, we will consistently uses this protocol for storing and retrieving downloaded files. The first three lines in the script above creates the directory path to the file. This path includes
 
 1. data_path -- the relative path into the folder "data" (relative to the location of the project file)
-2. data_folder -- the name of the folder within "data" containing the file
+2. folder -- the name of the folder within "data" containing the file
 3. filename -- the name of the file to read
 
 These are all put together into the absolute path using the function `here()` from the here package. Take a look at the value of file_path to confirm. The `read_excel(file_path, sheet="nestlingMass")` reads the nestlingMass sheet only. The next line:`chick <- data.table(chick)` converts the data.frame into a data.table.
-
-#### Troubleshooting file import
-
-If you get an error that starts with "Error: `path` does not exist:" then R is not "seeing" your specified file given the path you've given it.
-
-1. Make sure you loaded the package `here` in a "load-libraries" chunk and that you have run the chunk
-2. Make sure you have assigned `data_path <- "data"` in the setup chunk and have run the chunk.
-3. Make sure your "data" folder is *one level* inside your project folder. "one level" means it is not buried deeper inside other folders within the project folder.
-4. Make sure your "Data from ..." folder is one level inside your "data" folder
-5. Make sure you have the name of the "Data from ..." folder correct in your script. To do this, I do not type the name but instead go to the finder (on Mac OS) and highlight the "Data from ..." folder and copy the name -- the whole name -- and then paste in between the quote mark in the line `data_folder <- ""`
-6. Make sure your data file is one level inside the correct "Data from" folder.
-7. Make sure the file name is correct in the script. As with the folder name, I go to the finder and copy the file name and paste it in place. In Windows use ctrl-a instead of ctrl-c to copy the full filename including the extension.
-
-More generally, R is *very literal* when it comes to: Spelling. Humans are very good at understanding misspelled words but the R language (or any computer language) is very literal. "Data from Quantifying the effects of" and "Data from Quantifying the efects of" are different values. Capitalization. R is **case sensitive** (some programming languages are not). "Data from Quantifying", "Data from quantifying", and "data from quantifying" are all different values. Spelling AND capitalization have to be perfect, not simply close. Humans are very good at understanding misspelled and OdDLy capitalized words but the R language (or any computer language) is very literal.
 
 #### Peak at the imported data.table to check that the file was imported correctly and to learn about the contents.
 
@@ -206,9 +197,9 @@ Steps
 A .csv file is a text file that is comma-delimted, which means that the entries of a row are separated by commas. A text file is readable by any text editor software and most other kinds of software. Datasets that are stored as text files are typically saved as either .csv (where the entries of a row are separated by commas) or .txt (where the entries are separated by tabs). The base R way to read a .csv file is using `read.csv`. The `read.table` function is more versatile, as the delimiter can be specified. The function `fread()` from the data.table package is fast, smart, and flexible. It is smart in the sense that it guesses what the delimter is. Unfortunately, because of spaces in the column labels for this file, fread guesses incorrectly (another reason why spaces in column labels should be avoided). To overcome this, the statement below specifies that the file contains a "header" (a line containing column labels)
 
 ```{r data-bee-csv}
-data_folder <- "Data from Neonicotinoid pesticide reduces bumblebee colony growth and queen production"
+folder <- "Data from Neonicotinoid pesticide reduces bumblebee colony growth and queen production"
 filename <- "Whitehorn, O'Connor, Wackers, Goulson (2012) Data from 'Neonicotinoid pesticide reduces bumblebee colony growth and queen production'.csv.csv"
-file_path <- here(data_path, data_folder, filename)
+file_path <- here(data_path, folder, filename)
 bee <- fread(file_path, header=TRUE)
 ```
 
@@ -244,6 +235,29 @@ gg <- ggplot(data=data.frame(means.glm), aes(x=treatment, y=rate)) +
 gg
 ```
 
+
+## Troubleshooting file import
+
+If you get an error that starts with "Error: `path` does not exist:" then R is not "seeing" your specified file given the path you've given it.
+
+1. Make sure you loaded the package `here` in a "load-libraries" chunk and that you have run the chunk
+2. Make sure you have assigned `data_path <- "data"` in the setup chunk and have run the chunk.
+3. Make sure your "data" folder is *one level* inside your project folder. "one level" means it is not buried deeper inside other folders within the project folder.
+4. Make sure your "Data from ..." folder is one level inside your "data" folder
+5. Make sure your data file is one level inside the correct "Data from" folder.
+6. **Bug alert** Make sure you have the name of the "Data from ..." folder correct in your script. Do not type the name of the folder. Instead, go to the finder and highlight the folder containing the data file, copy the name, return to the R markdown script, type `folder <- ""` and then paste the clipboard (the name of the folder) in between the quote marks.
+7. **Bug alert** Make sure the file name is correct in the script. As with the folder name, I go to the finder and copy the file name and paste it in place. In Windows use ctrl-a instead of ctrl-c to copy the full filename including the extension.
+
+More generally, Humans are very good at understanding misspelled and OdDLy capitalized words but the R language (or any computer language) is very literal. R is **case sensitive** (some programming languages are not). "Prenatal acoustic communication", "Prenatal Acoustic Communication", and "prenatal acoustic communication" are all different values. Spelling AND capitalization have to be perfect, not simply close. Spelling includes *spaces*. A frequent bug is a file name typed as "Prenatal acoustic communication" when the actual name is "Prenatal acoustic  communication". Can you spot the bug? The original (what we need to copy) has two spaces between "acoustic" and "communication" while the incorrect copy has only one.
+
+Spelling bugs are avoided by simply copy and pasting names of folders, names of files, column names of data frames, and level names of factors, which leads to a general rule of R scripting...
+
+### Rule number one in R scripting {# rule1}
+
+**Always copy and paste any text that will be inserted into quotes**
+
+Do not try to type it out. You have been warned.
+
 ## Data wrangling
 ### Converting a single column with all combinations of a 2 x 2 factorial experiment into two columns, each containing the two levels of a factor
 
@@ -255,7 +269,7 @@ filename: "41586_2018_BFnature25492_MOESM10_ESM.xlsx"
 
 sheet: "Fig. 4h-tumours"
 
-```{r}
+```{r, echo=FALSE}
 folder <- "TGF-beta drives immune evasion in genetically reconstituted colon cancer metastasis"
 fn <- "41586_2018_BFnature25492_MOESM10_ESM.xlsx"
 file_path <- here('data', folder, fn)
@@ -266,7 +280,7 @@ tumor[, name := factor(name)]
 
 ```
 
-The analysis of the data in Fig. 4h specifies a single $X$ variable "Treatment" with four levels: "Con", "Gal", "aPD-L1", and "Gal+aPD-L1". These levels indicate that the design is actually **factorial** with two factors, each with two levels. The first factor has levels "no Gal" and "Gal". The second factor has levels "no aPD-L1", "aPD-L1". The single column Treatment "flattens" the  2 X 2 factorial design to a 4 x 1 design. In general, we would want to analyze an experiment like this as factorial model, because this allows us to make inferences about the *interaction effect* between the two factors. For these inferences, we need a standard error, or a confidence interval, or a *p*-value of the estimate, which we can easily get from the factorial model. In order to analyze the data with a factorial model, we need to create two new columns -- one column is the factor variable containing the two levels of Gal and one column is the factor variable containing the two levels of aPD-L1.
+The analysis of the data in Fig. 4h specifies a single $X$ variable "Treatment" with four levels (or groups): "Con", "Gal", "aPD-L1", and "Gal+aPD-L1". These levels indicate that the design is actually **factorial** with two factors, each with two levels. The first factor has levels "no Gal" and "Gal". The second factor has levels "no aPD-L1", "aPD-L1". The single column Treatment "flattens" the  2 X 2 factorial design to a 4 x 1 design. In general, we would want to analyze an experiment like this as factorial model, because this allows us to make inferences about the *interaction effect* between the two factors. For these inferences, we need a standard error, or a confidence interval, or a *p*-value of the estimate, which we can easily get from the factorial model. In order to analyze the data with a factorial model, we need to create two new columns -- one column is the factor variable containing the two levels of Gal and one column is the factor variable containing the two levels of aPD-L1.
 
 ```{r}
 gal_levels <- c("no Gal", "Gal")
@@ -292,6 +306,34 @@ tumor[!is.na(num_positive_per_mm), .(N=.N), by=.(treatment, gal, apdl1)]
 ```
 
 That looks good.
+
+**Bug alert** If you break Rule #1, and type in the treatment level "Gal+aPD-L1" as "Gal + aPD-L1", then you will get new columns containing junk.
+
+```{r, echo=FALSE}
+tumor2 <- copy(tumor)
+gal_levels <- c("no Gal", "Gal")
+tumor2[, gal := ifelse(treatment == "Gal" | treatment == "Gal + aPD-L1",
+                      gal_levels[2],
+                      gal_levels[1])]
+
+apd_levels <- c("no aPD-L1", "aPD-L1")
+tumor2[, apdl1 := ifelse(treatment == "aPD-L1" | treatment == "Gal + aPD-L1",
+                      apd_levels[2],
+                      apd_levels[1])]
+
+# re-order factor levels
+tumor2[, gal:=factor(gal, gal_levels)]
+tumor2[, apdl1:=factor(apdl1, apd_levels)]
+tumor2[!is.na(num_positive_per_mm), .(N=.N), by=.(treatment, gal, apdl1)]
+
+```
+
+Remember Rule #1. Always copy and paste any text that will be inserted into quotes. This is easily done here by typing `unique(tumor$treatment)` into the console. This function returns the unique values of the column "treatment" of the data.table "tumor".
+
+> unique(tumor$treatment)
+[1] "Con"        "Gal"        "aPD-L1"     "Gal+aPD-L1"
+
+Now, copy the name of a level and paste into your code. Repeat until done.
 
 ### Combining data
 
